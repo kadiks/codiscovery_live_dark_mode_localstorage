@@ -15,10 +15,10 @@
 
 ## Partie 2
 
-- [ ] Utiliser les media queries pour afficher le dark ou le light
-- [ ] Utiliser un toggle (on/off) pour changer de mode
-- [ ] localStorage pour se rappeler de la préférence
+- [x] Utiliser les media queries pour afficher le dark ou le light
+- [x] Utiliser un toggle (on/off) pour changer de mode
+- [x] localStorage pour se rappeler de la préférence
 
 ## Bonus
 
-- [ ] Joli CSS
+- [x] Joli CSS
