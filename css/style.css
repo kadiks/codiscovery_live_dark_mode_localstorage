@@ -1,0 +1,109 @@
+:root {
+  --font-name: Comfortaa, Arial, Helvetica, sans-serif;
+  --font-light-body: #000;
+  --font-dark-body: #fff;
+
+  --bg-light-color: #fff;
+  --bg-dark-color: #000;
+
+  /* --primary-color: hsl(209deg 100% 50%); */
+  --light-primary-color: hsl(209deg, 100%, 30%);
+  --dark-primary-color: hsl(209deg, 100%, 70%);
+
+  /* --secondary-color: hsl(32, 100%, 50%); */
+  --light-secondary-color: hsl(32deg, 100%, 40%);
+  --dark-secondary-color: hsl(32deg, 100%, 70%);
+
+  /* Light */
+
+  --bg-color: var(--bg-light-color);
+  --font-body: var(--font-light-body);
+  --font-button-body: var(--font-dark-body);
+  --primary-color: var(--light-primary-color);
+  --secondary-color: var(--light-secondary-color);
+
+  /* Dark */
+  /* --bg-color: var(--bg-dark-color);
+  --font-body: var(--font-dark-body);
+  --font-button-body: var(--font-light-body);
+  --primary-color: var(--dark-primary-color);
+  --secondary-color: var(--dark-secondary-color); */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: var(--bg-light-color);
+    --font-body: var(--font-light-body);
+    --font-button-body: var(--font-dark-body);
+    --primary-color: var(--light-primary-color);
+    --secondary-color: var(--light-secondary-color);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: var(--bg-dark-color);
+    --font-body: var(--font-dark-body);
+    --font-button-body: var(--font-light-body);
+    --primary-color: var(--dark-primary-color);
+    --secondary-color: var(--dark-secondary-color);
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+}
+
+.toggle-color-mode {
+  all: unset;
+  color: grey;
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-color-mode .selected {
+  color: var(--secondary-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-body);
+  margin: 0;
+  font-family: var(--font-name);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.header-title {
+  margin-top: 2em;
+  width: 70vw;
+  text-align: center;
+}
+
+.call-to-action {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.call-to-action a {
+  all: unset;
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--font-button-body);
+
+  font-size: 1.3em;
+
+  padding: 0.2em 0.3em;
+}
+
+.call-to-action .now {
+  border: 1px solid var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--font-button-body);
+}
